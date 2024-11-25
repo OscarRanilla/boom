@@ -14,7 +14,7 @@ function generarNumeroAleatorio() {
 function iniciarCuentaAtras() {
     return new Promise((resolve) => {
         let contador = 5;
-        countdownElemento.textContent = contador;
+        countdownElemento.textContent = `Cuenta atrás: ${contador} segundos`;
 
         //USAMOS EL setInterval(() para generar el contador de 5 segundos
         const interval = setInterval(() => {
@@ -48,12 +48,12 @@ function evaluarResultado() {
         mensajePrincipal.textContent = `La bomba ha estallado.`; 
         mensajePrincipal.className = "wrong-message"; 
         
-        mensajeNumeros.textContent = `Tu número: ${numeroUsuario}, es el mismo que el número: ${numeroAleatorio}`; 
+        mensajeNumeros.textContent = `Tu número: ${numeroUsuario} no es el mismo que el número: ${numeroAleatorio}`; 
         mensajeNumeros.className = "result-message"; } 
         // Añadir los mensajes al contenedor principal 
         resultElemento.appendChild(mensajePrincipal); 
         resultElemento.appendChild(mensajeNumeros); 
-    }
+}
 
 //QUINTO FUNCION PRINCIPAL PARA INICAR EL JUEGO
 function iniciarJuego() {
